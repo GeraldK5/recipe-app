@@ -2,6 +2,10 @@
 
 A Flutter-based recipe application that allows users to browse meal categories, search for recipes, view detailed meal information, and manage their favorite meals.
 
+# Link to apk below
+
+https://drive.google.com/file/d/1c3eirOGt6QwkhP9BEQhVbSMhBfcbt7__/view?usp=sharing
+
 ## Features
 
 - 🍽️ Browse meals by categories
