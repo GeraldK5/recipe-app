@@ -49,7 +49,6 @@ The app uses the following main dependencies:
 - `get: ^4.7.2` - State management and navigation
 - `http: ^1.5.0` - HTTP requests for API calls
 - `shared_preferences: ^2.5.3` - Local storage for favorites
-- `cupertino_icons: ^1.0.8` - iOS-style icons
 
 ## Architecture Decisions
 
@@ -105,7 +104,6 @@ lib/
 └── main.dart          # App entry point
 ```
 
-**Rationale**: Clear separation by functionality makes the codebase maintainable and scalable.
 
 ## API Integration
 
@@ -148,61 +146,3 @@ Breakdown:
 - Search functionality and navigation: 1 hour
 - Favorites feature with SharedPreferences: 30 minutes
 
-## Assumptions and Tradeoffs
-
-### Assumptions
-1. **Internet Connectivity**: The app assumes reliable internet connection for API calls
-2. **API Reliability**: TheMealDB API is assumed to be consistently available
-3. **Image Loading**: All meal images from the API are assumed to be accessible
-4. **Data Format**: API response format is assumed to remain consistent
-
-### Tradeoffs
-1. **Caching Strategy**: 
-   - **Choice**: Simple in-memory caching in controllers
-   - **Tradeoff**: Better performance vs. memory usage
-   - **Alternative**: Could implement persistent caching with local database
-
-2. **State Management Complexity**:
-   - **Choice**: GetX for simplicity
-   - **Tradeoff**: Learning curve vs. development speed
-   - **Alternative**: More robust solutions like Bloc for larger apps
-
-3. **Error Handling**:
-   - **Choice**: Basic error display with retry options
-   - **Tradeoff**: User experience vs. development time
-   - **Enhancement**: Could add more sophisticated error handling
-
-4. **Offline Support**:
-   - **Choice**: No offline functionality
-   - **Tradeoff**: App simplicity vs. offline usability
-   - **Enhancement**: Could cache favorite meal details locally
-
-## Future Enhancements
-
-- [ ] Offline mode with local database
-- [ ] User authentication and cloud sync
-- [ ] Recipe ratings and reviews
-- [ ] Shopping list generation
-- [ ] Meal planning calendar
-- [ ] Social sharing features
-- [ ] Advanced filtering options
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For questions or suggestions, please contact [your-email@example.com] or create an issue in the repository.
-
----
-
-**Built with ❤️ using Flutter**
